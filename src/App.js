@@ -47,7 +47,7 @@ function App() {
       {/* Todo: Show below table conditionally (only once result data is available) */}
       {/* Show fallback text if no data is available */}
       {!results && <h2 style={{textAlign:"center"}}>No Investments Calculated Yet!</h2>}
-      {results &&<ResultsTable data={results}/>}
+      {results &&<ResultsTable data={results} initialInvestment={1200}/>}
       </div>
   );
 }

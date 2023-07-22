@@ -17,12 +17,12 @@ const ResultsTable=(props)=>
         <tbody>
 
             {props.data.map((item)=>{return(
-                <tr>
+                <tr key={item.year}>
              <td>{item.year}</td>
                 <td>{item.savingsEndOfYear}</td>
                 <td>{item.yearlyInterest}</td>
-                <td>{1000}</td>
-                <td>{2000}</td>
+                <td>{item.savingsEndOfYear-props.initialInvestment-item.yearlyContribution*item.year}</td>
+                <td>{props.initialInvestment+item.yearlyContribution*item.year}</td>
               </tr>
             )})}
 
